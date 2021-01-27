@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://rennan:<password>@cluster0.bq15o.mongodb.net/<dbname>?retryWrites=true&w=majority',{useMongoClient:true});
+
+mongoose.connect('mongodb://localhost/:27017', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 mongoose.Promise = global.Promise;
 module.exports = mongoose;
